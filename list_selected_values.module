@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains list_selected_values.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function list_selected_values_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the list_selected_values module.
+    case 'help.page.list_selected_values':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Shows all list field options with selected items.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function list_selected_values_theme() {
+  return [
+    'list_selected_values' => [
+      'variables' => [
+        'item' => NULL,
+        'selected' => NULL,
+      ],
+    ],
+  ];
+}

@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Format a list field item depending on whether or not it was selected.
+ *
+ * Available variables:
+ * - selected: Boolean. TRUE if the item was selected.
+ * - item: The list item value.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<span class="list-selected-values-item__marker">
+  {% if selected %}
+    ✔
+  {% else %}
+    ✖
+  {% endif %}
+</span> 
+<span class="list-selected-values-item__value">{{ item }}</span>
