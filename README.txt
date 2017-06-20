@@ -1,4 +1,4 @@
-Shows all list field options with selected items.
+Drupal 8 module to show all list field options with selected items.
 
 Use case:
 
