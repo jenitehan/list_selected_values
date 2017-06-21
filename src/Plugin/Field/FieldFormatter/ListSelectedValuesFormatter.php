@@ -15,7 +15,7 @@ use Drupal\Core\Form\OptGroup;
  *
  * @FieldFormatter(
  *   id = "list_selected_values_formatter",
- *   label = @Translation("List selected values formatter"),
+ *   label = @Translation("List selected values"),
  *   field_types = {
  *     "list_integer",
  *     "list_float",
