@@ -1,0 +1,14 @@
+{
+  "name": "jenitehan/list_selected_values",
+  "type": "drupal-module",
+  "description": "Shows all list field options with selected items.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/jenitehan/list_selected_values",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://github.com/jenitehan/list_selected_values/issues",
+    "source": "https://github.com/jenitehan/list_selected_values"
+  },
+  "require": { }
+}
