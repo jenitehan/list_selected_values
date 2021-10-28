@@ -3,7 +3,6 @@
 namespace Drupal\list_selected_values\Plugin\Field\FieldFormatter;
 
 // These taken from OptionsDefaultFormatter.php
-use Drupal\Core\Field\AllowedTagsXssTrait;
 use Drupal\Core\Field\FieldFilteredMarkup;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
@@ -24,8 +23,6 @@ use Drupal\Core\Form\OptGroup;
  * )
  */
 class ListSelectedValuesFormatter extends FormatterBase {
-  
-  use AllowedTagsXssTrait;
 
   /**
    * {@inheritdoc}
@@ -40,14 +37,14 @@ class ListSelectedValuesFormatter extends FormatterBase {
         ->getOptionsProvider('value', $items->getEntity());
       // Get all of the options, flatten the possible options, to support opt groups.
       $options = OptGroup::flattenOptions($provider->getPossibleOptions());
-      
+
       // Need a new array of all the set values for this field to compare against $options.
       $set_values = [];
       foreach ($items as $delta => $item) {
         $value = $item->value;
         $set_values[$item->value] = TRUE;
       }
-      
+
       // I'm guessing that delta needs to be numeric so...
       $i = 0;
       foreach ($options as $key => $value) {

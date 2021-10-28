@@ -2,6 +2,7 @@ name: List Selected Values
 type: module
 description: Shows all list field options with selected items.
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: Fields
 dependencies:
   - options
